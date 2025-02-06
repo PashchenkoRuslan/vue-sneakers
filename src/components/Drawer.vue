@@ -20,7 +20,7 @@ const createOrder = async () => {
   try {
     isCreating.value = true
 
-    const { data } = await axios.post(`https://604781a0efa572c1.mokky.dev/orders`, {
+    const { data } = await axios.post(`https://d2e60887ee64511b.mokky.dev/orders`, {
       items: cart.value,
       totalPrice: props.totalPrice.value
     })

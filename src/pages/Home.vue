@@ -39,12 +39,12 @@ const addToFavorite = async (item) => {
 
       item.isFavorite = true
 
-      const { data } = await axios.post(`https://604781a0efa572c1.mokky.dev/favorites`, obj)
+      const { data } = await axios.post(`https://d2e60887ee64511b.mokky.dev/favorites`, obj)
 
       item.favoriteId = data.id
     } else {
       item.isFavorite = false
-      await axios.delete(`https://604781a0efa572c1.mokky.dev/favorites/${item.favoriteId}`)
+      await axios.delete(`https://d2e60887ee64511b.mokky.dev/favorites/${item.favoriteId}`)
       item.favoriteId = null
     }
   } catch (err) {
@@ -54,7 +54,7 @@ const addToFavorite = async (item) => {
 
 const fetchFavorites = async () => {
   try {
-    const { data: favorites } = await axios.get(`https://604781a0efa572c1.mokky.dev/favorites`)
+    const { data: favorites } = await axios.get(`https://d2e60887ee64511b.mokky.dev/favorites`)
 
     items.value = items.value.map((item) => {
       const favorite = favorites.find((favorite) => favorite.item_id === item.id)
@@ -84,7 +84,7 @@ const fetchItems = async () => {
       params.title = `*${filters.searchQuery}*`
     }
 
-    const { data } = await axios.get(`https://604781a0efa572c1.mokky.dev/items`, {
+    const { data } = await axios.get(`https://d2e60887ee64511b.mokky.dev/items`, {
       params
     })
 

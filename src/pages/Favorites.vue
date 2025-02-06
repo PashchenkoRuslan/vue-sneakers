@@ -9,7 +9,7 @@ const favorites = ref([])
 onMounted(async () => {
   try {
     const { data } = await axios.get(
-      'https://604781a0efa572c1.mokky.dev/favorites?_relations=items'
+      'https://d2e60887ee64511b.mokky.dev/favorites?_relations=items'
     )
 
     favorites.value = data.map((obj) => obj.item)
