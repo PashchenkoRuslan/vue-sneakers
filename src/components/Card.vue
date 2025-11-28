@@ -23,9 +23,9 @@ defineProps({
       @click="onClickFavorite"
     />
 
-    <img :src="imageUrl" alt="Sneaker" />
+    <img class="h-[200px] mx-auto" :src="imageUrl" alt="Sneaker" />
 
-    <p class="mt-2">{{ title }}</p>
+    <p class="mt-5 line-clamp-1">{{ title }}</p>
 
     <div class="flex justify-between mt-5">
       <div class="flex flex-col">

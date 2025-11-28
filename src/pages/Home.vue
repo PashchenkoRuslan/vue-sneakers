@@ -27,7 +27,7 @@ const onChangeSelect = (event) => {
 }
 
 const onChangeSearchInput = debounce((event) => {
-  filters.searchQuery = event.target.value
+  filters.searchQuery = event.target.value.trim()
 }, 300)
 
 const addToFavorite = async (item) => {
@@ -127,7 +127,7 @@ watch(filters, fetchItems)
     <h2 class="text-3xl font-bold mb-8">Все кроссовки</h2>
 
     <div class="flex gap-4 flex-wrap">
-      <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none">
+      <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none bg-white">
         <option value="name">По названию</option>
         <option value="price">По цене (дешевые)</option>
         <option value="-price">По цене (дорогие)</option>
