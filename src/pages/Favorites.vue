@@ -32,7 +32,7 @@ onMounted(async () => {
     <div
       class="w-20 h-20 flex items-center justify-center bg-gray-100 rounded-2xl shadow-sm overflow-hidden"
     >
-      <img src="package-icon.png" alt="" class="w-16 h-16 object-contain opacity-80" />
+      <img src="/package-icon.png" alt="" class="w-16 h-16 object-contain opacity-80" />
     </div>
 
     <p class="mt-6 text-2xl font-semibold text-gray-500">Тут пусто</p>
